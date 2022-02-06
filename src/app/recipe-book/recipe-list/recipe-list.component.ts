@@ -11,19 +11,19 @@ export class RecipeListComponent implements OnInit {
     new Recipe({
       name: 'Schnitzel',
       description: 'Very tasty',
-      imagePath:
+      imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
     }),
     new Recipe({
       name: 'Big Fat Burger',
       description: 'What else you need to say?',
-      imagePath:
+      imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
     }),
     new Recipe({
       name: 'Spaghetti',
       description: 'The best spagetti ever',
-      imagePath:
+      imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
     }),
   ];
