@@ -1,34 +1,48 @@
-<div class="row">
-  <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive" />
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <h1>Recipe Name</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <div ngbDropdown class="dropdown">
-      <button
-        ngbDropdownToggle
-        type="button"
-        class="btn btn-primary dropdown-toggle"
-      >
-        Manage Recipe <span class="caret"></span>
-      </button>
-      <ul ngbDropdownMenu class="dropdown-menu">
-        <li ngbDropdownItem><a href="#">Add to Shopping List</a></li>
-        <li ngbDropdownItem><a href="#">Edit Recipe</a></li>
-        <li ngbDropdownItem><a href="#">Delete Recipe</a></li>
-      </ul>
+<ng-container *ngIf="selectedRecipe; else empty">
+  <div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="selectedRecipe.imageUrl"
+        [alt]="selectedRecipe.name"
+        class="img-responsive"
+      />
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">Description</div>
-</div>
-<div class="row">
-  <div class="col-xs-12">Ingredients:</div>
-</div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ selectedRecipe.name }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div ngbDropdown class="dropdown">
+        <button
+          ngbDropdownToggle
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+        >
+          Manage Recipe <span class="caret"></span>
+        </button>
+        <ul ngbDropdownMenu class="dropdown-menu">
+          <li ngbDropdownItem><a href="#">Add to Shopping List</a></li>
+          <li ngbDropdownItem><a href="#">Edit Recipe</a></li>
+          <li ngbDropdownItem><a href="#">Delete Recipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">Description</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">Ingredients:</div>
+  </div>
+</ng-container>
+
+<ng-template #empty>
+  <p>Please select a recipe</p>
+</ng-template>
