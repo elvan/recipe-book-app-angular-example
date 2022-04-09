@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'RecipeBook';
 
-  feature = 'recipe-book';
+  feature = 'shopping-list';
 
   onFeatureSelected(feature: string): void {
     this.feature = feature;
