@@ -3,11 +3,17 @@
     <div class="navbar-header">
       <a href="/" class="navbar-brand">RecipeBook</a>
     </div>
+
     <div class="collaps navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/recipes">Recipes</a></li>
-        <li><a href="/shopping-list">Shopping List</a></li>
+        <li>
+          <a href="#" (click)="onSelect('recipe-book')">Recipes</a>
+        </li>
+        <li>
+          <a href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+        </li>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
         <li ngbDropdown class="dropdown">
           <a ngbDropdownToggle href="#" class="dropdown-toggle" role="button"
